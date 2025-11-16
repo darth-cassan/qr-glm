@@ -98,7 +98,9 @@ h1 {
 }
 
 #qrcode {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     background: white;
     border-radius: 12px;
@@ -110,18 +112,14 @@ h1 {
 
 #qrcode img {
     border-radius: 8px;
-    max-width: 100%;
+    max-width: min(256px, 100%);
     height: auto;
-    display: block;
-    margin: 0 auto;
 }
 
 #qrcode canvas {
     border-radius: 8px;
-    max-width: 100%;
+    max-width: min(256px, 100%);
     height: auto;
-    display: block;
-    margin: 0 auto;
 }
 
 .download-group {
