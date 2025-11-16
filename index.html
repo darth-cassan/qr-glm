@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📱</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>QR Code Generator</h1>
+            <p class="subtitle">Convert any URL into a downloadable QR code</p>
+            
+            <div class="input-group">
+                <input 
+                    type="url" 
+                    id="urlInput" 
+                    placeholder="Enter your URL here..." 
+                    autocomplete="url"
+                >
+                <button id="generateBtn" class="btn-primary">Generate</button>
+            </div>
+            
+            <div id="qrcode-container" class="qrcode-container hidden">
+                <div id="qrcode"></div>
+                <div class="download-group">
+                    <button id="downloadBtn" class="btn-download">
+                        <span>Download QR Code</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="error" class="error hidden"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
